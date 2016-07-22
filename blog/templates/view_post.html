@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% block title %}{{ post.title }} - Life Proficiency{% endblock %}
+
+
+{% block content %}
+
+<div class="col-sm-7 col-sm-offset-1" id="article_content">
+    <h1> {{ post.title }} </h1>
+    <small id="date_category_tag"> {{ post.posted|date|linebreaks }}</small></br>
+    <img src="{{ post.image.url }}" class="img-responsive"/></br>
+    {{ post.body|linebreaks }}
+</div>
+{% endblock %}
+
+

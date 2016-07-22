@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Life Proficiency - Be proficient in life{% endblock %}</title>
+    </head>
+    <body>
+        <!-- Loads the path to your static files -->
+        {% load staticfiles %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <h1 class="lp">Life Proficiency</h1>
+                <!-- Header -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Items -->
+                <div class="collapse navbar-collapse" id="topNavBar">
+                    <ul class="nav navbar-nav ">
+                        <li class="active">
+                            <a href="{% url 'index' %}">Home</a>
+                        </li>
+                        <li class="">
+                            <a href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="">
+                            <a href="{% url 'contact' %}">Contact</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form" role="search" method="get" action="#">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="q" value="">
+                                </div>
+                                <button type="submit" class="btn btn-default">Search</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {% block content %}
+        <div class="col-sm-7 col-sm-offset-1" id="article_content">
+
+        {% endblock %}
+        </div>
+    </body>
+</html>

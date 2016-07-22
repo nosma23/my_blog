@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    {% if posts %}
+        <div class="col-sm-7 col-sm-offset-1">
+            <ul>
+            {% for post in posts %}
+                <li><a class="article-title" href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+                <li id="date_category_tag">{{ post.posted|date|linebreaks }}</li></br>
+                <li id="article_content">{{ post.body|truncatewords:62 }}</li>
+                <li><a id="read_more" href="{{ post.get_absolute_url }}"> [Read More...]</a></li></br>
+                <li id="date_category_tag">Category: {{ post.category }}</li>
+                <hr>
+                <hr>
+            {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+
+{% endblock %}

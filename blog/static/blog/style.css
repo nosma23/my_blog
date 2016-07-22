@@ -1,0 +1,59 @@
+body {
+    background: white url('images/background.png');
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+ul {
+    list-style: none;
+}
+
+.article-title {
+    font-size: 30px;
+    color: black;
+}
+
+.lp {
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    color: whitesmoke;
+}
+
+.form-horizontal {
+    display: inline-block;
+    text-align: left;
+}
+#article_content {
+    font-size: 20px;
+    color: #000;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#read_more {
+    font-size: 18px;
+    color: limegreen;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#date_category_tag {
+    font-size: 15px;
+    color: slategrey;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+}
+
+
+
+
