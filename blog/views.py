@@ -1,9 +1,10 @@
+from django.core.mail import EmailMessage
 from django.shortcuts import get_object_or_404, redirect, render
+from django.template import Context
+from django.template.loader import get_template
+
 from .models import Blog, Category
 from .forms import ContactForm
-from django.template.loader import get_template
-from django.core.mail import EmailMessage
-from django.template import Context
 
 def index(request):
     return render(request, 'index.html', {

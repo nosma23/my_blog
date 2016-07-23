@@ -1,8 +1,8 @@
-from django.conf.urls import url
-from django.contrib import admin
 from blog.views import index, view_post, about_page, contact
 from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls.static import static
+from django.contrib import admin
 
 app_name = 'blog'
 

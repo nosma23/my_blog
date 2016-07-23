@@ -9,7 +9,11 @@
             {% for post in posts %}
                 <li><a class="article-title" href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
                 <li id="date_category_tag">{{ post.posted|date|linebreaks }}</li></br>
-                <li id="article_content">{{ post.body|truncatewords:62 }}</li>
+                <div style="display: inline-flex">
+                    <li> <img src="{{ post.image.url }}" class="img-responsive" id="pic"> </li>
+                    <div style="width: 50px"></div>
+                    <li id="article_content">{{ post.body|truncatewords:62 }}</li>
+                </div>
                 <li><a id="read_more" href="{{ post.get_absolute_url }}"> [Read More...]</a></li></br>
                 <li id="date_category_tag">Category: {{ post.category }}</li>
                 <hr>

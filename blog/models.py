@@ -1,11 +1,18 @@
 from __future__ import unicode_literals
+
+from django.conf import settings
 from django.db import models
 from django.db.models import permalink
 
 class Blog(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
-    image = models.FileField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True,
+                              width_field='width_field',
+                              height_field='height_field')
+    width_field = models.IntegerField(default=0)
+    height_field = models.IntegerField(default=0)
     body = models.TextField()
     posted = models.DateTimeField(db_index=True, auto_now_add=True)
     category = models.ForeignKey('blog.Category')
