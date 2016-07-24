@@ -2,6 +2,7 @@ from django.core.mail import EmailMessage
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template import Context
 from django.template.loader import get_template
+from django.utils import timezone
 
 from .models import Blog, Category
 from .forms import ContactForm
@@ -9,7 +10,7 @@ from .forms import ContactForm
 def index(request):
     return render(request, 'index.html', {
         'categories': Category.objects.all(),
-        'posts': Blog.objects.all().order_by("-posted")[:5]
+        'posts': Blog.objects.filter(publish__lte=timezone.now()).order_by("-posted")[:5]
     })
 
 def view_post(request, slug):

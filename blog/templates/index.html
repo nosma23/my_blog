@@ -7,8 +7,8 @@
         <div class="col-sm-7 col-sm-offset-1">
             <ul>
             {% for post in posts %}
-                <li><a class="article-title" href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-                <li id="date_category_tag">{{ post.posted|date|linebreaks }}</li></br>
+                <li><a class="article-title" href="{{ post.get_absolute_url }}">{{ post.title }}</a></li></br>
+                <li id="date_category_tag">{{ post.publish }} {% if post.user.get_full_name %} by {{ post.user.get_full_name}} {% endif %}</li></br>
                 <div style="display: inline-flex">
                     <li> <img src="{{ post.image.url }}" class="img-responsive" id="pic"> </li>
                     <div style="width: 50px"></div>

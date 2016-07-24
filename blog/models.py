@@ -14,6 +14,7 @@ class Blog(models.Model):
     width_field = models.IntegerField(default=0)
     height_field = models.IntegerField(default=0)
     body = models.TextField()
+    publish = models.DateTimeField(auto_now=False, auto_now_add=False)
     posted = models.DateTimeField(db_index=True, auto_now_add=True)
     category = models.ForeignKey('blog.Category')
 
