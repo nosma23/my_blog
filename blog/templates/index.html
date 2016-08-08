@@ -8,17 +8,36 @@
             <ul>
             {% for post in posts %}
                 <li><a class="article-title" href="{{ post.get_absolute_url }}">{{ post.title }}</a></li></br>
-                <li id="date_category_tag">{{ post.publish }} {% if post.user.get_full_name %} by {{ post.user.get_full_name}} {% endif %}</li></br>
-                <div style="display: inline-flex">
+                <li id="date_category_tag">{{ post.publish|date }} {% if post.user.get_full_name %} by {{ post.user.get_full_name}} {% endif %}</li></br>
+                <div class="post-detail-item" style="display: inline-flex">
                     <li> <img src="{{ post.image.url }}" class="img-responsive" id="pic"> </li>
                     <div style="width: 50px"></div>
-                    <li id="article_content">{{ post.body|truncatewords:62 }}</li>
+                    <li class="content-markdown" id="article_content">{{ post.get_markdown|truncatewords_html:60 }}</li>
                 </div>
                 <li><a id="read_more" href="{{ post.get_absolute_url }}"> [Read More...]</a></li></br>
                 <li id="date_category_tag">Category: {{ post.category }}</li>
                 <hr>
                 <hr>
             {% endfor %}
+
+
+                <div class="pagination">
+                    <span class="step-links">
+                        {% if posts.has_previous %}
+                            <a href="?{{ page_request_var }}={{ posts.previous_page_number }}{% if request.GET.q %}
+                            &q={{ request.GET.q }}{% endif %}">previous</a>
+                        {% endif %}
+
+                        <span class="current">
+                            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+                        </span>
+
+                        {% if posts.has_next %}
+                            <a href="?{{ page_request_var }}={{ posts.next_page_number }}{% if request.GET.q %}
+                            &q={{ request.GET.q }}{% endif %}">next</a>
+                        {% endif %}
+                    </span>
+                </div>
             </ul>
         </div>
     {% else %}

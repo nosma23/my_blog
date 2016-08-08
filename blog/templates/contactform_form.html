@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
-{% block title %}Contact - {{ block.super }}{% endblock %}
+{% load crispy_forms_tags %}
+{% block title %}Contact | {% endblock %}
 
 {% block content %}
 <div class="container">
     <div class="col-sm-12 col-md-7">
         <div class="panel-body">
-            <h1>Contact</h1>
-            <form class='form-horizontal' role="form" action="" method="post">
+            <h1 class="col-sm-8">Contact</h1>
+            <form class="col-sm-8" role="form" action="" method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {{ form|crispy }}
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
                 </div>
             </form>
         </div>

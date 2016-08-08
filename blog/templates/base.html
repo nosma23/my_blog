@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Life Proficiency - Be proficient in life{% endblock %}</title>
+        <link rel="icon" href="https://photos-4.dropbox.com/t/2/AADNXXvHiKuVbnBbCdojn2VyQvHrDeQVvj1K8VH57fzGjg/12/460381046/png/32x32/1/_/1/2/hipsterlogogenerator_1468583638153.png/EJmMxNwDGNkKIAcoBw/z0zmyFT5s3Cw6oKWoerzhvY35AH3dN3OvfZmT7pzfQU?dl=0&size=1280x960&size_mode=3">
+        <title>{% block title %}{% endblock %}Life Proficiency | Be proficient in life</title>
     </head>
     <body>
     <div id="fb-root"></div>
@@ -19,7 +20,23 @@
         <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script   src="http://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQ
+        zLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $(".content-markdown").each(function(){
+                var content = $(this).text()
+                var markedContent = marked(content)
+                $(this).html(markedContent)
+            })
+            $(".post-detail-item img").each(function(){
+                $(this).addClass('img-responsive');
+            })
+        })
+
+        </script>
 
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -48,7 +65,7 @@
                         <li>
                             <form class="navbar-form" role="search" method="get" action="#">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="q" value="">
+                                    <input type="text" class="form-control" name="q" value="{{ request.GET.q }}">
                                 </div>
                                 <button type="submit" class="btn btn-default">Search</button>
                             </form>
