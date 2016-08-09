@@ -9,10 +9,10 @@
             {% for post in posts %}
                 <li><a class="article-title" href="{{ post.get_absolute_url }}">{{ post.title }}</a></li></br>
                 <li id="date_category_tag">{{ post.publish|date }} {% if post.user.get_full_name %} by {{ post.user.get_full_name}} {% endif %}</li></br>
-                <div class="post-detail-item" style="display: inline-flex">
-                    <li> <img src="{{ post.image.url }}" class="img-responsive" id="pic"> </li>
+                <div class="row">
+                    <img src="{{ post.image.url }}" class="img-responsive col-sm-3" id="pic">
                     <div style="width: 50px"></div>
-                    <li class="content-markdown" id="article_content">{{ post.get_markdown|truncatewords_html:60 }}</li>
+                    <div class="content-markdown col-sm-9" id="article_content">{{ post.get_markdown|truncatewords:59 }}</div>
                 </div>
                 <li><a id="read_more" href="{{ post.get_absolute_url }}"> [Read More...]</a></li></br>
                 <li id="date_category_tag">Category: {{ post.category }}</li>
