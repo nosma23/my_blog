@@ -7,7 +7,6 @@ from django.utils import timezone
 
 from .models import Blog, Category
 from .forms import ContactForm
-from .utils import get_read_time
 
 def index(request):
     queryset_list = Blog.objects.filter(publish__lte=timezone.now()).order_by("-posted")
@@ -33,7 +32,6 @@ def index(request):
 
 def view_post(request, slug):
     post = get_object_or_404(Blog, slug=slug)
-    print(get_read_time(post.get_markdown()))
     context = {'post': post, }
     return render(request, 'view_post.html', context)
 
