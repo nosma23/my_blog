@@ -41,31 +41,31 @@ def about_page(request):
 
 
 def contact(request):
-
     form = ContactForm(request.POST or None)
+    if request.method == 'POST':
 
-    if form.is_valid():
-        contact_name = request.POST.get(
-            'contact_name'
-            , '')
-        contact_email = request.POST.get(
-            'contact_email'
-            , '')
-        form_content = request.POST.get('content', '')
+        if form.is_valid():
+            contact_name = request.POST.get(
+                'contact_name'
+                , '')
+            contact_email = request.POST.get(
+                'contact_email'
+                , '')
+            form_content = request.POST.get('content', '')
 
-        # Email the profile with the contact information
+            # Email the profile with the contact information
 
-        subject = 'Site contact form'
-        from_email = settings.EMAIL_HOST_USER
-        to_email = ['manos@lifeproficiency.com']
-        contact_message = '%s: %s via %s'%(
-            contact_name,
-            form_content,
-            contact_email)
-        send_mail(subject,
-                  contact_message,
-                  from_email,
-                  to_email, fail_silently=True)
+            subject = 'Site contact form'
+            from_email = settings.EMAIL_HOST_USER
+            to_email = ['manos@lifeproficiency.com']
+            contact_message = '%s: %s via %s' % (
+                contact_name,
+                form_content,
+                contact_email)
+            send_mail(subject,
+                      contact_message,
+                      from_email,
+                      to_email, fail_silently=True)
 
     return render(request, 'contactform_form.html', {
         'form': form,
