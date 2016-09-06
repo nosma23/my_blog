@@ -2,26 +2,21 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Life Proficiency is a self-improvement blog which provides you with tips and hacks you can
-        directly apply in your life.">
-        <link rel="icon" href="https://photos-4.dropbox.com/t/2/AADNXXvHiKuVbnBbCdojn2VyQvHrDeQVvj1K8VH57fzGjg/12/460381046/png/32x32/1/_/1/2/hipsterlogogenerator_1468583638153.png/EJmMxNwDGNkKIAcoBw/z0zmyFT5s3Cw6oKWoerzhvY35AH3dN3OvfZmT7pzfQU?dl=0&size=1280x960&size_mode=3">
+        <meta name="description" content="Life Proficiency is a self-improvement blog which provides
+         you with tips and hacks you can directly apply in your life.">
         <title>{% block title %}{% endblock %}Life Proficiency | Be proficient in life</title>
-    </head>
-    <body>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-        <!-- Loads the path to your static files -->
         {% load staticfiles %}
+        {% load crispy_forms_tags %}
+        <link rel="icon" href="https://photos-4.dropbox.com/t/2/AADNXXvHiKuVbnBbCdojn2VyQvHrDeQVvj1K8
+        VH57fzGjg/12/460381046/png/32x32/1/_/1/2/hipsterlogogenerator_1468583638153.png/EJmMxNwDGNkKIA
+        coBw/z0zmyFT5s3Cw6oKWoerzhvY35AH3dN3OvfZmT7pzfQU?dl=0&size=1280x960&size_mode=3">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+    </head>
+    <body>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script   src="http://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQ
         zLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
@@ -38,8 +33,16 @@
                 $(this).addClass('img-responsive');
             })
         })
-
         </script>
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -48,7 +51,7 @@
                     <i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="https://plus.google.com/u/0/118374686979133529175/about/p/pub">
                     <i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                </div></br>
+                </div><br/>
                 <h1 class="lp">Life Proficiency</h1>
                 <!-- Header -->
                 <div class="navbar-header">
@@ -58,7 +61,7 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-                </br></br></br>
+                <br/><br/><br/>
                 <!-- Items -->
                 <div class="collapse navbar-collapse" id="topNavBar">
                     <ul class="nav navbar-nav">
@@ -83,43 +86,78 @@
                 </div>
             </div>
         </nav>
-        <div class="row pull-left" style="position: fixed">
-            </br></br></br></br></br>
+        <div class="container-fluid">
+            <div class="row pull" style="position: fixed">
+                <div class="col-sm-1">
+                    <br/><br/><br/><br/><br/>
 
-            <ul>
-                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
-                <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
-                </a></li>
+                    <ul>
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
+                        <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+                        </a></li>
 
-                <li><a href="https://twitter.com/home?status=I'm%20going%20to%20be%20life%20proficient...%20Come%20join
-                %20me%20at%20lifeproficiency.com%20{{ request.build_absolute_uri }}">
-                <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
-                </a></li>
+                        <li><a href="https://twitter.com/home?status=I'm%20going%20to%20be%20life%20proficient...%20Come%20join
+                        %20me%20at%20lifeproficiency.com%20{{ request.build_absolute_uri }}">
+                        <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+                        </a></li>
 
-                <li><a href='https://plus.google.com/share?url={{ request.build_absolute_uri }}'><i class="fa
-                fa-google-plus-square fa-3x" aria-hidden="true"></i></a></li>
+                        <li><a href='https://plus.google.com/share?url={{ request.build_absolute_uri }}'><i class="fa
+                        fa-google-plus-square fa-3x" aria-hidden="true"></i></a></li>
 
-                <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}
-                &title=Life%20Proficiency%20%7C%20Blog%20&summary=Life%20Proficiency%20is%20a%20self-improvement%20Blog
-                %20for%20those%20who%20need%20to%20achieve%20something%20more%20in%20their%20life.&source=
-                {{ request.build_absolute_uri }}"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}
+                        &title=Life%20Proficiency%20%7C%20Blog%20&summary=Life%20Proficiency%20is%20a%20self-improvement%20Blog
+                        %20for%20those%20who%20need%20to%20achieve%20something%20more%20in%20their%20life.&source=
+                        {{ request.build_absolute_uri }}"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>
 
-                <li><a href="http://www.reddit.com/submit?url={{ request.build_absolute_uri }}&title=Life%20Proficiency.
-                %20The%20self-improvement%20Blog%20made%20for%20those%20who%20need%20to%20achieve%20something%20more%20in
-                %20their%20life."><i class="fa fa-reddit-square fa-3x" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
-
-        {% block content %}
-
-        {% endblock %}
-        <div class="container">
+                        <li><a href="http://www.reddit.com/submit?url={{ request.build_absolute_uri }}&title=Life%20Proficiency.
+                        %20The%20self-improvement%20Blog%20made%20for%20those%20who%20need%20to%20achieve%20something%20more%20in
+                        %20their%20life."><i class="fa fa-reddit-square fa-3x" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
 
 
+            {% block content %}
+
+            {% endblock %}
+
+
+
+            <div class="col-sm-3 col-sm-offset-1">
+                            <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+                <form action="//lifeproficiency.us14.list-manage.com/subscribe/post?u=bf76e3e194c38f2c45b1a48c5&amp;
+                id=757537d786" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                      class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                    <h2 id='lettershead'>Join our mailing list and get free updates about how to become proficient in life</h2>
+                <div class="mc-field-group">
+
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your Email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none; color: red;"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_bf76e3e194c38f2c45b1a48c5_757537d786"
+                               tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
+                                              id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                </form>
+                </div>
+                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();
+                    fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'
+                    ;}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                <!--End mc_embed_signup-->
+            </div>
         </div>
 
         <footer class="footer">
-          <div class="container"></br>
+          <div class="container"><br/>
             <p class="text-muted">&copy; 2016 Life Proficiency Blog</p>
           </div>
         </footer>

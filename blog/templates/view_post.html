@@ -6,23 +6,23 @@
 {% block content %}
 
 <div class="col-sm-7 col-sm-offset-1" id="article_content">
-    <ul>
-        <h1> {{ post.title }} </h1>
-        <small id="date_category_tag"> {{ post.publish|date }} {% if post.user.get_full_name %}
-            by {{ post.user.get_full_name}} {% endif %}</small></br>
-        <div style="height: 20px"></div>
-        <img src="{{ post.image.url }}" class="img-responsive"/></br>
-        <div class="content-markdown post-detail-item"> {{ post.body }} </div>
+    <h1> {{ post.title }} </h1>
+    <small id="date_category_tag"> {{ post.publish|date }} {% if post.user.get_full_name %}
+        by {{ post.user.get_full_name}} {% endif %}</small><br/>
+    <div style="height: 20px"></div>
+    <img src="{{ post.image.url }}" class="img-responsive"/><br/>
+    <div class="content-markdown post-detail-item"> {{ post.body }} </div>
 
-        <div style="height: 50px"></div>
-        <li id="date_category_tag">Category: {{ post.category }}</li></br>
+    <div style="height: 50px"></div>
+    <div id="date_category_tag">Category: {{ post.category }}</div><br/>
 
-        <div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="button_count"
-             data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-        <p>
-        <div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5"></div>
-        </p>
-    </ul>
+    <div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="button_count"
+         data-action="like" data-size="small" data-show-faces="false" data-share="true"></div><br/><br/>
+    <div class="row">
+    <div class="col-sm-12">
+    <div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5"></div>
+    </div>
+    </div>
 </div>
 {% endblock %}
 

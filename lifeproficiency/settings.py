@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,13 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     #third party apps
     'crispy_forms',
     'ckeditor',
+    'mailchimp',
     'markdown_deux',
     #my apps
-    'blog.apps.BlogConfig',
+    'blog',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -145,3 +147,5 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+MAILCHIMP_API_KEY = '21467b67e9b5f312663a721d9b668f1c-us14'

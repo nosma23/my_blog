@@ -1,12 +1,13 @@
 from django.conf import settings
+from django.contrib import messages
 from django.core.mail import send_mail
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
-
 from .models import Blog, Category
 from .forms import ContactForm
+
 
 def index(request):
     queryset_list = Blog.objects.filter(publish__lte=timezone.now()).order_by("-posted")
@@ -29,6 +30,7 @@ def index(request):
         'posts': queryset,
         'page_request_var': page_request_var
     })
+
 
 def view_post(request, slug):
     post = get_object_or_404(Blog, slug=slug)
@@ -66,7 +68,10 @@ def contact(request):
                       contact_message,
                       from_email,
                       to_email, fail_silently=True)
+            messages.success(request, 'Form submission successful!')
 
-    return render(request, 'contactform_form.html', {
-        'form': form,
-    })
+    return render(request, 'contactform_form.html', {'form': form, })
+
+
+
+

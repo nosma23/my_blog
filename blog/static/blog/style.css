@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/background.png');
+    background: url('images/background.png');
 }
 
 .navbar {
@@ -37,6 +37,12 @@ ul {
 }
 #article_content {
     font-size: 20px;
+    color: #000;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#index_content {
+    font-size: 17px;
     color: #000;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -102,56 +108,56 @@ div ul div a:hover {
 
 .fa-facebook-square {
     color: #3b5998;
-    margin-left: -24px;
+    margin-left: -55px;
  }
 
 .fa-facebook-square:hover {
     color: midnightblue;
-    margin-left: -20px;
+    margin-left: -51px;
     transition: 0.3s;
 }
 
 .fa-twitter-square {
     color: #55acee;
-    margin-left: -24px;
+    margin-left: -55px;
  }
 
 .fa-twitter-square:hover {
     color: dodgerblue;
-    margin-left: -20px;
+    margin-left: -51px;
     transition: 0.3s;
 }
 
 .fa-google-plus-square {
     color: #dd4b39;
-    margin-left: -24px;
+    margin-left: -55px;
  }
 
 .fa-google-plus-square:hover {
     color: darkred;
-    margin-left: -20px;
+    margin-left: -51px;
     transition: 0.3s;
 }
 
 .fa-linkedin-square {
     color: #007bb5;
-    margin-left: -24px;
+    margin-left: -55px;
  }
 
 .fa-linkedin-square:hover {
     color: darkslateblue;
-    margin-left: -20px;
+    margin-left: -51px;
     transition: 0.3s;
 }
 
 .fa-reddit-square {
     color: #ff4500;
-    margin-left: -24px;
+    margin-left: -55px;
  }
 
 .fa-reddit-square:hover {
     color: red;
-    margin-left: -20px;
+    margin-left: -51px;
     transition: 0.3s;
 }
 
@@ -159,6 +165,17 @@ div ul div a:hover {
   height: 60px;
   background-color: rgba(0, 0, 0, 0.84);
   text-align: center;
+}
+
+#lettershead {
+    color: palegreen;
+}
+
+#mc_embed_signup{
+    background:rgba(0, 0, 0, 0.84);
+    clear:left;
+    font:14px Helvetica, Arial, sans-serif;
+    width:300px;
 }
 
 

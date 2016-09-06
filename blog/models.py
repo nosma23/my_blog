@@ -6,6 +6,7 @@ from django.db.models import permalink
 from django.utils.safestring import mark_safe
 from markdown_deux import markdown
 
+
 class Blog(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
     title = models.CharField(max_length=100, unique=True)
@@ -31,6 +32,7 @@ class Blog(models.Model):
         body = self.body
         return mark_safe(markdown(body))
 
+
 class Category(models.Model):
     title = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True)
@@ -41,5 +43,7 @@ class Category(models.Model):
     @permalink
     def get_absolute_url(self):
         return ('view_blog_category', None, { 'slug': self.slug })
+
+
 
 
