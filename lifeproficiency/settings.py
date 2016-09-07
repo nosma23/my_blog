@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     #third party apps
     'crispy_forms',
     'ckeditor',
-    'mailchimp',
     'markdown_deux',
     #my apps
     'blog',
@@ -148,4 +147,3 @@ EMAIL_PORT = 587
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-MAILCHIMP_API_KEY = '21467b67e9b5f312663a721d9b668f1c-us14'
