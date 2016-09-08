@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@7qb31kb2l(e*gkn6qi_6#x6fba($6!#a9=pvq5x$oz4%=_bq8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -82,16 +82,10 @@ WSGI_APPLICATION = 'lifeproficiency.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-import urlparse
-db_url = urlparse.urlparse(os.environ.get('OPENSHIFT_POSTGRESQL_DB_URL'))
-
-DATABASES = {'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': os.environ['OPENSHIFT_lifeopenshift'],
-    'USER': db_url.username,
-    'PASSWORD': db_url.password,
-    'HOST': db_url.hostname,
-    'PORT': db_url.port,
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

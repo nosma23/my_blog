@@ -3,7 +3,7 @@ import os, sys
 
 sys.path.append(os.path.join(os.environ['OPENSHIFT_REPO_DIR']))
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'lifeopenshift.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'lifeproficiency.settings'
 
 virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
 
@@ -19,18 +19,10 @@ except IOError:
 # line, it's possible required libraries won't be in your searchable path
 #
 
-def application(environ, start_response):
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application() 
 
-    ctype = 'text/plain'
-    if environ['PATH_INFO'] == '/health':
-        response_body = "1"
-    elif environ['PATH_INFO'] == '/env':
-        response_body = ['%s: %s' % (key, value)
-                    for key, value in sorted(environ.items())]
-        response_body = '\n'.join(response_body)
-    else:
-        ctype = 'text/html'
-        response_body = '''<!doctype html>
+'''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
