@@ -1,1 +1,1 @@
-web: gunicorn lifeproficiency.wsgi
+web: gunicorn lifeproficiency.wsgi --log-file -
