@@ -25,8 +25,6 @@ SECRET_KEY = '@7qb31kb2l(e*gkn6qi_6#x6fba($6!#a9=pvq5x$oz4%=_bq8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 SITE_ID = 1
 # Application definition
 
@@ -147,3 +145,11 @@ EMAIL_PORT = 587
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
