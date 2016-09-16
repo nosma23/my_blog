@@ -25,8 +25,7 @@ SECRET_KEY = '@7qb31kb2l(e*gkn6qi_6#x6fba($6!#a9=pvq5x$oz4%=_bq8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
 SITE_ID = 1
 # Application definition
