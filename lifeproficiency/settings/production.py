@@ -19,6 +19,12 @@ if not settings.DEBUG:
         'blog',
     ]
 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(settings.BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
     try:
         import dj_database_url
