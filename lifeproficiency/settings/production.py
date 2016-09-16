@@ -40,7 +40,8 @@ if not settings.DEBUG:
 
     STATIC_ROOT = os.path.join(settings.BASE_DIR, 'blog/static_cdn')
     MEDIA_ROOT = os.path.join(settings.BASE_DIR, 'blog/media_cdn')
-
+    STATIC_URL = '/static/'
+    MEDIA_URL = '/media/'
     STATICFILES_DIRS = [
         os.path.join(settings.BASE_DIR, "blog/static"),
         #'/var/www/static/',
