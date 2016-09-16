@@ -93,3 +93,8 @@ ENV/
 static_cdn/
 
 media_cdn/
+
+*.sqlite3
+
+/lifeproficiency/settings/local.py
+

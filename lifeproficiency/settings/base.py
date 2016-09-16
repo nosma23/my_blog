@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,9 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@7qb31kb2l(e*gkn6qi_6#x6fba($6!#a9=pvq5x$oz4%=_bq8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
+DEBUG = False
 
 SITE_ID = 1
 # Application definition
@@ -82,12 +80,12 @@ WSGI_APPLICATION = 'lifeproficiency.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}
+}"""
 
 
 # Password validation
@@ -129,13 +127,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "blog/static"),
-    #'/var/www/static/',
-]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static_cdn')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'blog/media_cdn')
+
+
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #DEFAULT_FROM_EMAIL = 'testing@example.com'
@@ -146,12 +140,4 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
 
