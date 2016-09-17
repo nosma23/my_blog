@@ -38,5 +38,3 @@ if not settings.DEBUG:
 
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
-    STATIC_ROOT = os.path.join(settings.BASE_DIR, 'blog/static_cdn')
-    MEDIA_ROOT = os.path.join(settings.BASE_DIR, 'blog/media_cdn')
