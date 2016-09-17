@@ -2,7 +2,9 @@ from .base import *
 
 try:
     from .local import *
+    live = False
 except:
-    pass
+    live = True
 
-from .production import  *
+from .production import *
+
