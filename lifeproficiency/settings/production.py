@@ -19,12 +19,7 @@ if not settings.DEBUG:
         'blog',
     ]
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(settings.BASE_DIR, 'db.sqlite3'),
-        }
-    }
+    DATABASES = settings.DATABASES
 
     try:
         import dj_database_url
@@ -38,11 +33,3 @@ if not settings.DEBUG:
 
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
-    STATIC_ROOT = os.path.join(settings.BASE_DIR, 'blog/static_cdn')
-    MEDIA_ROOT = os.path.join(settings.BASE_DIR, 'blog/media_cdn')
-    STATIC_URL = '/static/'
-    MEDIA_URL = '/media/'
-    STATICFILES_DIRS = [
-        os.path.join(settings.BASE_DIR, "blog/static"),
-        #'/var/www/static/',
-    ]
