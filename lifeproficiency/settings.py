@@ -161,3 +161,5 @@ if not DEBUG:
         os.path.join(BASE_DIR, "blog/static"),
         #'/var/www/static/',
     ]
+
+    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
