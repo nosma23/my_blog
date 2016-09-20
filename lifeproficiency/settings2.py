@@ -154,8 +154,8 @@ if not DEBUG:
 
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
-    STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static_cdn')
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'blog/media_cdn')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'blog/staticfiles')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'blog/mediafiles')
 
     STATICFILES_DIRS = [
         os.path.join(BASE_DIR, "blog/static"),
