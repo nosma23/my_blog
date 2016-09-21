@@ -20,4 +20,8 @@ if not settings.DEBUG:
         from whitenoise.django import DjangoWhiteNoise
         application = DjangoWhiteNoise(get_wsgi_application())
     except:
+<<<<<<< HEAD
         pass
+=======
+        pass
+>>>>>>> 8e1ae63091cdef25aeee2be95d4a9dc5ca09aeb6
