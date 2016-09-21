@@ -86,11 +86,6 @@ ENV/
 # Spyder project settings
 .spyderproject
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 8e1ae63091cdef25aeee2be95d4a9dc5ca09aeb6
-# Rope project settings
 .ropeproject
 
 blog/staticfiles/
@@ -99,9 +94,4 @@ blog/mediafiles/
 
 *.sqlite3
 
-<<<<<<< HEAD
 /lifeproficiency/settings/local.py
-=======
-/lifeproficiency/settings/local.py
-
->>>>>>> 8e1ae63091cdef25aeee2be95d4a9dc5ca09aeb6
