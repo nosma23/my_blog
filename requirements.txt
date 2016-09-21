@@ -1,9 +1,6 @@
 dj-database-url==0.4.0
 Django==1.9.9
-<<<<<<< HEAD
 dj-database-url==0.4.0
-=======
->>>>>>> 8e1ae63091cdef25aeee2be95d4a9dc5ca09aeb6
 gunicorn==19.4.5
 psycopg2==2.6.1
 whitenoise==2.0.6
