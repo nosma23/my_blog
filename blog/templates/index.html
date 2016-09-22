@@ -15,9 +15,9 @@
                     <div style="width: 50px"></div>
                     <div class="content-markdown col-sm-9" id="index_content">{{ post.get_markdown|truncatewords:59 }}</div>
                 </div>
-                <div><a class="read_more" href="{{ post.get_absolute_url }}">READ MORE</a></div></br>
+                <div><a class="read_more" href="{{ post.get_absolute_url }}">READ MORE</a></div><br/>
                 <li id="date_category_tag">Category: {{ post.category }}</li>
-                <br/><br/><br/><br/><br/>
+                <br/><br/><br/><br/><br/><br/>
             {% endfor %}
 
 
