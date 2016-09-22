@@ -88,9 +88,9 @@ ENV/
 
 .ropeproject
 
-blog/staticfiles/
+staticfiles/
 
-blog/mediafiles/
+mediafiles/
 
 *.sqlite3
 
