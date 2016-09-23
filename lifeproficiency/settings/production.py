@@ -15,6 +15,7 @@ if not settings.DEBUG:
         'crispy_forms',
         'ckeditor',
         'markdown_deux',
+        'storages',
         # my apps
         'blog',
     ]
@@ -38,4 +39,3 @@ if not settings.DEBUG:
 
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
-    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
