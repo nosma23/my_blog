@@ -120,10 +120,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+"""
 AWS_ACCESS_KEY_ID = "AKIAI6BF7LNPE2YDDGAQ"
 AWS_SECRET_ACCESS_KEY = "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"
 
@@ -153,6 +153,16 @@ AWS_HEADERS = {
     'Expires': expires,
     'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()), ),
 }
+"""
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    #'/var/www/static/',
+]
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #DEFAULT_FROM_EMAIL = 'testing@example.com'
