@@ -141,6 +141,7 @@ MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_ROOT = MEDIA_URL
 STATIC_URL = S3_URL + 'static/'
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+AWSS3HOST = "s3-us-west-2.amazonaws.com"
 
 import datetime
 
