@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'ckeditor',
     'markdown_deux',
+    'storages',
     #my apps
     'blog',
 ]
@@ -123,7 +124,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-"""
+
 AWS_ACCESS_KEY_ID = "AKIAI6BF7LNPE2YDDGAQ"
 AWS_SECRET_ACCESS_KEY = "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"
 
@@ -163,7 +164,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     #'/var/www/static/',
 ]
-
+"""
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #DEFAULT_FROM_EMAIL = 'testing@example.com'
 EMAIL_HOST = 'smtp.gmail.com'
