@@ -1,5 +1,7 @@
 body {
     background: url('images/background.png');
+    display: table;
+    width: 100%;
 }
 
 .navbar {
