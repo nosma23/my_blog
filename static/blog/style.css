@@ -165,6 +165,7 @@ div ul div a:hover {
   height: 60px;
   background-color: rgba(0, 0, 0, 0.84);
   text-align: center;
+  display: table-row;
 }
 
 #lettershead {
