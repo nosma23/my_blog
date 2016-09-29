@@ -167,11 +167,18 @@ div ul div a:hover {
 }
 
 .footer {
-  height: 60px;
+  height: 1px;
   background-color: rgba(0, 0, 0, 0.84);
   text-align: center;
   display: table-row;
 }
+
+.page-row {
+  display: table-row;
+  height: 1px;
+}
+
+.page-row-expanded { height: 100%; }
 
 #lettershead {
     color: palegreen;
