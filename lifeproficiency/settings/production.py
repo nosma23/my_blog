@@ -66,3 +66,9 @@ if not settings.DEBUG:
         'Expires': expires,
         'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()),),
     }
+
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = 'manos.bass23@gmail.com'
+    EMAIL_HOST_PASSWORD = 'lolol456'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
