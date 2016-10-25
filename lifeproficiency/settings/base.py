@@ -131,7 +131,7 @@ AWS_SECRET_ACCESS_KEY = "eSWpvvDvXCUmpko+cvHDx6dv3VmMiPJEtPMhxRd4"
 
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
-AWS_QUERYSTRING_AUTH = False
+AWS_QUERYSTRING_AUTH = True
 
 DEFAULT_FILE_STORAGE = 'lifeproficiency.utils.MediaRootS3BotoStorage'
 STATICFILES_STORAGE = 'lifeproficiency.utils.StaticRootS3BotoStorage'
