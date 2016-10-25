@@ -60,11 +60,11 @@ if not settings.DEBUG:
 
     two_months = datetime.timedelta(days=61)
     date_two_months_later = datetime.date.today() + two_months
-    expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
-
+    # expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
+    # 'max-age=%d' % (int(two_months.total_seconds()), )
     AWS_HEADERS = {
-        'Expires': expires,
-        'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()),),
+        'Expires': 'Thu, 27 Apr 2017 20:00:00 GMT',
+        'Cache-Control': 'max-age=86400',
     }
 
     EMAIL_HOST = 'smtp.gmail.com'
