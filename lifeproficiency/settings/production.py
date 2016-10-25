@@ -44,7 +44,7 @@ if not settings.DEBUG:
 
     AWS_FILE_EXPIRE = 200
     AWS_PRELOAD_METADATA = True
-    AWS_QUERYSTRING_AUTH = False
+    AWS_QUERYSTRING_AUTH = True
 
     DEFAULT_FILE_STORAGE = 'lifeproficiency.utils.MediaRootS3BotoStorage'
     STATICFILES_STORAGE = 'lifeproficiency.utils.StaticRootS3BotoStorage'
@@ -63,7 +63,7 @@ if not settings.DEBUG:
     # expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
     # 'max-age=%d' % (int(two_months.total_seconds()), )
     AWS_HEADERS = {
-        'Expires': 'Thu, 27 Apr 2017 20:00:00 GMT',
+        'Expires': 'Thu, 15 Apr 2010 20:00:00 GMT',
         'Cache-Control': 'max-age=86400',
     }
 
