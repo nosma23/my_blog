@@ -152,7 +152,7 @@ date_two_months_later = datetime.date.today() + two_months
 #'max-age=%d' % (int(two_months.total_seconds()), )
 AWS_HEADERS = {
     'Expires': 'Thu, 15 Apr 2010 20:00:00 GMT',
-    'Cache-Control': str('public, max-age=15552000'),
+    'Cache-Control': 'max-age=86400',
 }
 """
 
