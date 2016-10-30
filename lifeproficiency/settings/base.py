@@ -148,11 +148,10 @@ import datetime
 
 two_months = datetime.timedelta(days=61)
 date_two_months_later = datetime.date.today() + two_months
-#expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
-#'max-age=%d' % (int(two_months.total_seconds()), )
+expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
+
 AWS_HEADERS = {
-    'Expires': 'Thu, 15 Apr 2010 20:00:00 GMT',
-    'Cache-Control': 'max-age=86400',
+    'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()), ),
 }
 """
 
