@@ -1,5 +1,7 @@
 html,
-body { height: 100%; }
+body { height: 100%;
+       font-size: 20px;
+}
 
 body {
     background: url('images/background.png');
@@ -26,7 +28,7 @@ ul {
 }
 
 .article-title {
-    font-size: 30px;
+    font-size: 150%;
     color: black;
 }
 
@@ -41,13 +43,13 @@ ul {
     text-align: left;
 }
 #article_content {
-    font-size: 20px;
+    font-size: 100%;
     color: #000;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 #index_content {
-    font-size: 17px;
+    font-size: 85%;
     color: #000;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -69,7 +71,7 @@ div ul div a:hover {
     color: ghostwhite;
     float: right;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 65%;
     height: 35px;
     padding-top: 8px;
     text-align: center;
@@ -78,7 +80,7 @@ div ul div a:hover {
 }
 
 #date_category_tag {
-    font-size: 13px;
+    font-size: 65%;
     color: slategrey;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -187,7 +189,7 @@ div ul div a:hover {
 #mc_embed_signup{
     background:rgba(0, 0, 0, 0.84);
     clear:left;
-    font:14px Helvetica, Arial, sans-serif;
+    font:70% Helvetica, Arial, sans-serif;
     width:300px;
 }
 
