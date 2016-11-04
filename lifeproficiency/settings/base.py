@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     #third party apps
     'crispy_forms',
     'ckeditor',
-    'compressor',
     'markdown_deux',
     'storages',
     #my apps
@@ -130,7 +129,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 AWS_ACCESS_KEY_ID = "AKIAI6BF7LNPE2YDDGAQ"
 AWS_SECRET_ACCESS_KEY = "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"
 
-AWS_IS_GZIPPED = True
+
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
 AWS_QUERYSTRING_AUTH = True
@@ -145,17 +144,7 @@ MEDIA_ROOT = MEDIA_URL
 STATIC_URL = S3_URL + 'static/'
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 AWSS3HOST = "s3-us-west-2.amazonaws.com"
-COMPRESS_OFFLINE = True
-COMPRESS_ENABLED = True
-COMPRESS_URL = STATIC_URL
-COMPRESS_CSS_FILTERS = [
-    'compressor.filters.css_default.CssAbsoluteFilter',
-    'compressor.filters.cssmin.CSSMinFilter'
-]
-COMPRESS_JS_FILTERS = [
-    'compressor.filters.jsmin.JSMinFilter',
-]
-COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
+
 import datetime
 
 two_months = datetime.timedelta(days=61)
@@ -165,18 +154,9 @@ expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
 AWS_HEADERS = {
     'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()), ),
 }
-
+"""
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-COMPRESS_ROOT = STATIC_ROOT
-
-GZIP_CONTENT_TYPES = (
-    'text/css',
-    'application/javascript',
-    'application/x-javascript',
-    'text/javascript'
-)
-"""
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
