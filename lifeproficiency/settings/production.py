@@ -14,6 +14,7 @@ if not settings.DEBUG:
         # third party apps
         'crispy_forms',
         'ckeditor',
+        'compressor',
         'markdown_deux',
         'storages',
         # my apps
@@ -41,7 +42,7 @@ if not settings.DEBUG:
 
     AWS_ACCESS_KEY_ID = "AKIAI6BF7LNPE2YDDGAQ"
     AWS_SECRET_ACCESS_KEY = "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"
-
+    AWS_IS_GZIPPED = True
     AWS_FILE_EXPIRE = 200
     AWS_PRELOAD_METADATA = True
     AWS_QUERYSTRING_AUTH = True
@@ -55,7 +56,17 @@ if not settings.DEBUG:
     MEDIA_ROOT = MEDIA_URL
     STATIC_URL = S3_URL + 'static/'
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-
+    COMPRESS_OFFLINE = True
+    COMPRESS_ENABLED = True
+    COMPRESS_URL = STATIC_URL
+    COMPRESS_CSS_FILTERS = [
+        'compressor.filters.css_default.CssAbsoluteFilter',
+        'compressor.filters.cssmin.CSSMinFilter'
+    ]
+    COMPRESS_JS_FILTERS = [
+        'compressor.filters.jsmin.JSMinFilter',
+    ]
+    COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
     import datetime
 
     two_months = datetime.timedelta(days=61)
