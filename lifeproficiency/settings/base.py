@@ -165,9 +165,18 @@ expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
 AWS_HEADERS = {
     'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()), ),
 }
-"""
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+COMPRESS_ROOT = STATIC_ROOT
+
+GZIP_CONTENT_TYPES = (
+    'text/css',
+    'application/javascript',
+    'application/x-javascript',
+    'text/javascript'
+)
+"""
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'

@@ -67,6 +67,16 @@ if not settings.DEBUG:
         'compressor.filters.jsmin.JSMinFilter',
     ]
     COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
+    STATIC_ROOT = os.path.join(settings.BASE_DIR, 'staticfiles')
+    COMPRESS_ROOT = STATIC_ROOT
+
+    GZIP_CONTENT_TYPES = (
+        'text/css',
+        'application/javascript',
+        'application/x-javascript',
+        'text/javascript'
+    )
+
     import datetime
 
     two_months = datetime.timedelta(days=61)
