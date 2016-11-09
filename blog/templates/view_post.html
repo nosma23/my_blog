@@ -1,5 +1,5 @@
 {% extends 'base.html' %} 
-
+{% load disqus_tags %}
 {% block title %}{{ post.title }} | {% endblock %}
 
 
@@ -19,6 +19,10 @@
     <div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5"></div>
     </div>
     </div>
+    {% set_disqus_identifier post.slug %}
+    {% set_disqus_title post.title %}
+    {% disqus_show_comments %}
+    {% disqus_dev %}
 </div>
 {% endblock %}
 
