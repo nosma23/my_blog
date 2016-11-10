@@ -14,6 +14,11 @@
     <div id="date_category_tag">Category: {{ post.category }}</div><br/>
     <div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="button_count"
          data-action="like" data-size="small" data-show-faces="false" data-share="true"></div><br/><br/>
+    {% load disqus_tags %}
+    {% set_disqus_identifier post.slug %}
+    {% set_disqus_title post.title %}
+    {% disqus_show_comments %}
+    {% disqus_dev %}
     <div id="disqus_thread"></div>
     <script>
     var disqus_config = function () {
