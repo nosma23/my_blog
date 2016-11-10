@@ -14,7 +14,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="15">
+          <list size="22">
             <item index="0" class="java.lang.String" itemvalue="django-ckeditor" />
             <item index="1" class="java.lang.String" itemvalue="docopt" />
             <item index="2" class="java.lang.String" itemvalue="markdown2" />
@@ -30,6 +30,13 @@
             <item index="12" class="java.lang.String" itemvalue="boto" />
             <item index="13" class="java.lang.String" itemvalue="django-storages-redux" />
             <item index="14" class="java.lang.String" itemvalue="django-disqus" />
+            <item index="15" class="java.lang.String" itemvalue="beautifulsoup4" />
+            <item index="16" class="java.lang.String" itemvalue="pbr" />
+            <item index="17" class="java.lang.String" itemvalue="html5lib" />
+            <item index="18" class="java.lang.String" itemvalue="django-htmlmin" />
+            <item index="19" class="java.lang.String" itemvalue="funcsigs" />
+            <item index="20" class="java.lang.String" itemvalue="mock" />
+            <item index="21" class="java.lang.String" itemvalue="webencodings" />
           </list>
         </value>
       </option>
