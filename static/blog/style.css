@@ -8,6 +8,8 @@ body {
     font-size: 20px;
 }
 
+li h1 { font-size: 100%}
+
 .navbar {
     border-radius: 0;
 }
