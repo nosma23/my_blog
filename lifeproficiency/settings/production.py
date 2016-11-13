@@ -39,8 +39,8 @@ if not settings.DEBUG:
 
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
-    AWS_ACCESS_KEY_ID = "AKIAIEP6M7ZYX7J7YOFA"
-    AWS_SECRET_ACCESS_KEY = "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"
+    #AWS_ACCESS_KEY_ID = "AKIAIEP6M7ZYX7J7YOFA"
+    #AWS_SECRET_ACCESS_KEY = "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"
 
     AWS_FILE_EXPIRE = 200
     AWS_PRELOAD_METADATA = True
@@ -71,3 +71,4 @@ if not settings.DEBUG:
     EMAIL_PORT = 587
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', True)
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', True)
+    s3 = (os.environ['AWS_ACCESS_KEY_ID'], os.environ['AWS_SECRET_ACCESS_KEY'])
