@@ -39,6 +39,9 @@ if not settings.DEBUG:
 
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
+    AWS_ACCESS_KEY_ID = "AKIAIEP6M7ZYX7J7YOFA"
+    AWS_SECRET_ACCESS_KEY = "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"
+
     AWS_FILE_EXPIRE = 200
     AWS_PRELOAD_METADATA = True
     AWS_QUERYSTRING_AUTH = True
@@ -62,7 +65,9 @@ if not settings.DEBUG:
     AWS_HEADERS = {
         'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()), ),
     }
-    s3 = S3Client(os.environ['AWS_ACCESS_KEY_ID'], os.environ['AWS_SECRET_ACCESS_KEY'])
+
     EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = 'manos.bass23@gmail.com'
+    EMAIL_HOST_PASSWORD = 'lolol456'
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
