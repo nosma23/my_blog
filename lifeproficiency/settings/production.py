@@ -14,7 +14,6 @@ if not settings.DEBUG:
         # third party apps
         'crispy_forms',
         'ckeditor',
-        'disqus',
         'markdown_deux',
         'storages',
         # my apps
