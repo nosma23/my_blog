@@ -68,7 +68,7 @@ def contact(request):
                       contact_message,
                       from_email,
                       to_email, fail_silently=True)
-            messages.success(request, 'Thank you for your message! We will get back to you ASAP')
+            messages.success(request, 'Thank you for your message! We will get back to you ASAP.')
 
     return render(request, 'contactform_form.html', {'form': form, })
 

@@ -62,7 +62,7 @@ if not settings.DEBUG:
     AWS_HEADERS = {
         'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()), ),
     }
-
+    s3 = S3Client(os.environ['S3_KEY'], os.environ['S3_SECRET'])
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
