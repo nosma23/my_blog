@@ -39,9 +39,6 @@ if not settings.DEBUG:
 
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
-    AWS_ACCESS_KEY_ID = "AKIAI6BF7LNPE2YDDGAQ"
-    AWS_SECRET_ACCESS_KEY = "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"
-
     AWS_FILE_EXPIRE = 200
     AWS_PRELOAD_METADATA = True
     AWS_QUERYSTRING_AUTH = True
