@@ -17,6 +17,7 @@ django-disqus==0.5
 funcsigs==1.0.2
 mock==2.0.0
 pbr==1.10.0
+django-s3-collectstatic==1.0
 
 
 
