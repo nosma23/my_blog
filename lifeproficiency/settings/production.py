@@ -66,8 +66,8 @@ if not settings.DEBUG:
     }
 
     EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = 'manos.bass23@gmail.com'
-    EMAIL_HOST_PASSWORD = 'nis90223'
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', True)
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', True)
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', True)
