@@ -15,6 +15,7 @@ if not settings.DEBUG:
         'crispy_forms',
         'ckeditor',
         'disqus',
+        'django_s3_collectstatic',
         'markdown_deux',
         'storages',
         # my apps

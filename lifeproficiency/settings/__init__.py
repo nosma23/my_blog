@@ -2,9 +2,8 @@ from .base import *
 
 try:
     from .local import *
-    live = False
 except:
-    live = True
+    pass
 
 from .production import *
 
