@@ -1,5 +1,4 @@
 import os
-import boto
 from django.conf import settings
 
 if not settings.DEBUG:
@@ -40,6 +39,9 @@ if not settings.DEBUG:
 
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
+    AWS_ACCESS_KEY_ID = "AKIAIEP6M7ZYX7J7YOFA"
+    AWS_SECRET_ACCESS_KEY = "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"
+
     AWS_FILE_EXPIRE = 200
     AWS_PRELOAD_METADATA = True
     AWS_QUERYSTRING_AUTH = True
@@ -67,7 +69,5 @@ if not settings.DEBUG:
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
-    AWS_ACCESS_KEY_ID = boto(os.environ.get('AWS_ACCESS_KEY_ID', True))
-    AWS_SECRET_ACCESS_KEY = boto(os.environ.get('AWS_SECRET_ACCESS_KEY', True))
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', True)
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', True)
