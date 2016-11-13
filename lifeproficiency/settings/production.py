@@ -68,6 +68,6 @@ if not settings.DEBUG:
 
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_HOST_USER = 'manos.bass23@gmail.com'
-    EMAIL_HOST_PASSWORD = 'lolol456'
+    EMAIL_HOST_PASSWORD = 'nis90223'
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
