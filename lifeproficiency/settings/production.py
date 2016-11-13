@@ -71,4 +71,5 @@ if not settings.DEBUG:
     EMAIL_PORT = 587
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', True)
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', True)
-    s3 = (os.environ.get['AWS_ACCESS_KEY_ID', True], os.environ.get['AWS_SECRET_ACCESS_KEY', True])
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', True)
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', True)
