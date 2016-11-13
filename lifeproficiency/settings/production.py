@@ -1,4 +1,5 @@
 import os
+import boto
 from django.conf import settings
 
 if not settings.DEBUG:
@@ -66,7 +67,7 @@ if not settings.DEBUG:
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
-    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', True)
-    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', True)
+    AWS_ACCESS_KEY_ID = boto(os.environ.get('AWS_ACCESS_KEY_ID', True))
+    AWS_SECRET_ACCESS_KEY = boto(os.environ.get('AWS_SECRET_ACCESS_KEY', True))
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', True)
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', True)
