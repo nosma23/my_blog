@@ -36,7 +36,7 @@ if not settings.DEBUG:
 
     # Honor the 'X-Forwarded-Proto' header for request.is_secure()
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
     AWS_ACCESS_KEY_ID = "AKIAIEP6M7ZYX7J7YOFA"
