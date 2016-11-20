@@ -5,10 +5,8 @@ body {
     background: url('images/background.png');
     display: table;
     width: 100%;
-    font-size: 20px;
+    font-size: 17px;
 }
-
-li h1 { font-size: 100%}
 
 .navbar {
     border-radius: 0;
@@ -29,7 +27,7 @@ ul {
 }
 
 .article-title {
-    font-size: 150%;
+    font-size: 100%;
     color: black;
 }
 
@@ -50,7 +48,7 @@ ul {
 }
 
 #index_content {
-    font-size: 85%;
+    font-size: 91%;
     color: #000;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -72,7 +70,7 @@ div ul div a:hover {
     color: ghostwhite;
     float: right;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 65%;
+    font-size: 70%;
     height: 35px;
     padding-top: 8px;
     text-align: center;

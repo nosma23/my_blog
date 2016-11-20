@@ -76,15 +76,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-#DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
 STATIC_ROOT = os.path.join(settings.BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(settings.BASE_DIR, 'mediafiles')
 STATIC_URL = '/static/'
