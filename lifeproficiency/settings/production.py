@@ -70,4 +70,3 @@ if not settings.DEBUG:
     EMAIL_PORT = 587
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', True)
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', True)
-    CRISPY_TEMPLATE_PACK = 'bootstrap3'
