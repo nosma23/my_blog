@@ -44,7 +44,7 @@ if not settings.DEBUG:
     AWS_FILE_EXPIRE = 200
     AWS_PRELOAD_METADATA = True
     AWS_QUERYSTRING_AUTH = False
-
+    CRISPY_TEMPLATE_PACK = 'bootstrap3'
     DEFAULT_FILE_STORAGE = 'lifeproficiency.utils.MediaRootS3BotoStorage'
     STATICFILES_STORAGE = 'lifeproficiency.utils.StaticRootS3BotoStorage'
     AWS_STORAGE_BUCKET_NAME = 'lifedjango'

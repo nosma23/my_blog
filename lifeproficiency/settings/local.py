@@ -75,7 +75,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 STATIC_ROOT = os.path.join(settings.BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(settings.BASE_DIR, 'mediafiles')
 STATIC_URL = '/static/'
