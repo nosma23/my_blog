@@ -11,7 +11,11 @@
                 <li id="date_category_tag">{{ post.publish|date }} {% if post.user.get_full_name %} by
                 {{ post.user.get_full_name}} {% endif %}</li><br/>
                 <div class="row">
-                    <img src="{{ post.image.url }}" class="img-responsive col-sm-3" id="pic">
+                    {% if post.thumb_image %}
+                        <img src="{{ post.thumb_image.url }}" class="img-responsive col-sm-3" id="pic">
+                    {% else %}
+                        <img src="{{ post.image.url }}" class="img-responsive col-sm-3" id="pic">
+                    {% endif %}
                     <div class="content-markdown col-sm-9" id="index_content">{{ post.get_markdown|truncatewords:62 }}</div>
                 </div>
                 <div><a class="read_more" href="{{ post.get_absolute_url }}">READ MORE</a></div><br/>
