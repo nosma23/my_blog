@@ -5,10 +5,12 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
+from django.views.decorators.gzip import gzip_page
 from .models import Blog, Category
 from .forms import ContactForm
 
 
+@gzip_page
 def index(request):
     queryset_list = Blog.objects.filter(publish__lte=timezone.now()).order_by("-posted")
     query = request.GET.get('q')
@@ -32,16 +34,19 @@ def index(request):
     })
 
 
+@gzip_page
 def view_post(request, slug):
     post = get_object_or_404(Blog, slug=slug)
     context = {'post': post, }
     return render(request, 'view_post.html', context)
 
 
+@gzip_page
 def about_page(request):
     return render(request, 'about.html')
 
 
+@gzip_page
 def contact(request):
     form = ContactForm(request.POST or None)
     if request.method == 'POST':
