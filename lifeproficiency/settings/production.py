@@ -1,5 +1,6 @@
 import os
 from django.conf import settings
+from boto.s3.connection import S3Connection
 
 if not settings.DEBUG:
     INSTALLED_APPS = [
@@ -39,8 +40,7 @@ if not settings.DEBUG:
 
     ALLOWED_HOSTS = ['radiant-ocean-78501.herokuapp.com', 'www.lifeproficiency.com']
 
-    AWS_ACCESS_KEY_ID = "AKIAIEP6M7ZYX7J7YOFA"
-    AWS_SECRET_ACCESS_KEY = "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"
+    s3 = S3Connection(os.environ['AWS_ACCESS_KEY_ID'], os.environ['AWS_SECRET_ACCESS_KEY'])
     AWS_FILE_EXPIRE = 200
     AWS_PRELOAD_METADATA = True
     AWS_QUERYSTRING_AUTH = False
