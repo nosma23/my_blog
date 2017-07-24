@@ -14,7 +14,13 @@
                     {% endfor %}
                 </ul>
                 {% endif %}
-                <h1 class="col-sm-8">Contact</h1><br/><br/><br/><br/>
+                <h1 class="col-sm-8">Contact Us</h1><br/><br/><br/><br/>
+                <div class="col-sm-8">
+                    <img src="https://dl.dropbox.com/s/uw0vmy8kz243ump/contactUs.jpeg?dl=0" class="img-responsive">
+                </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div class="col-sm-12">
+                    <p>If you have any questions, ideas or anything you would like to share please contact us. We would love to hear from you! You can use the contact form below! </p>
+                </div><br/><br/><br/><br/>
                 <form class="col-sm-8" role="form" action="" method="post">
                     {% csrf_token %}
                     {{ form|crispy }}
